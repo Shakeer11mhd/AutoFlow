@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexaFlow — AI Agents & Automation Systems</title>
+  <meta name="description" content="NexaFlow builds intelligent AI agents, automated business systems, and stunning digital brands that move at machine speed." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════ CURSOR ═══════════════════════ -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- ═══════════════════════ NAV ═══════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">NexaFlow</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#agents">AI Agents</a></li>
+      <li><a href="#automation">Automation</a></li>
+      <li><a href="#branding">Branding</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Start Project →</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#services" onclick="closeMobile()">Services</a></li>
+    <li><a href="#agents" onclick="closeMobile()">AI Agents</a></li>
+    <li><a href="#automation" onclick="closeMobile()">Automation</a></li>
+    <li><a href="#branding" onclick="closeMobile()">Branding</a></li>
+    <li><a href="#work" onclick="closeMobile()">Work</a></li>
+    <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="hero" id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-grid-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>AI-Powered Systems — Now Live</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="line" data-text="Automate.">Automate.</span>
+      <span class="line accent" data-text="Intelligently.">Intelligently.</span>
+      <span class="line" data-text="Scale.">Scale.</span>
+    </h1>
+    <p class="hero-sub">
+      We build AI agents, automated pipelines, and modern digital brands<br />
+      that work around the clock — so you don't have to.
+    </p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">
+        <span>Explore Services</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#work" class="btn-ghost">See Our Work</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" data-target="240">0</span><span>+</span><p>Automations Built</p></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-target="98">0</span><span>%</span><p>Uptime Rate</p></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-target="12">0</span><span>x</span><p>Avg Efficiency Gain</p></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ MARQUEE ═══════════════════════ -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-inner">
+      <span>AI Agents</span><span class="dot">◆</span>
+      <span>Workflow Automation</span><span class="dot">◆</span>
+      <span>Business Intelligence</span><span class="dot">◆</span>
+      <span>Brand Design</span><span class="dot">◆</span>
+      <span>Canva Systems</span><span class="dot">◆</span>
+      <span>Process Optimization</span><span class="dot">◆</span>
+      <span>LLM Integration</span><span class="dot">◆</span>
+      <span>Digital Transformation</span><span class="dot">◆</span>
+      <span>AI Agents</span><span class="dot">◆</span>
+      <span>Workflow Automation</span><span class="dot">◆</span>
+      <span>Business Intelligence</span><span class="dot">◆</span>
+      <span>Brand Design</span><span class="dot">◆</span>
+      <span>Canva Systems</span><span class="dot">◆</span>
+      <span>Process Optimization</span><span class="dot">◆</span>
+      <span>LLM Integration</span><span class="dot">◆</span>
+      <span>Digital Transformation</span><span class="dot">◆</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SERVICES ═══════════════════════ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Three Pillars of <br/><em>Modern Business Intelligence</em></h2>
+
+    <div class="services-grid">
+
+      <!-- AI Agents -->
+      <div class="service-card card-agents" id="agents">
+        <div class="card-number">01</div>
+        <div class="card-icon-wrap">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="20" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 52c0-11 9-20 20-20s20 9 20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="32" cy="20" r="4" fill="currentColor" opacity="0.3"/>
+              <path d="M32 10V4M22 14l-4-4M42 14l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <h3>AI Agents</h3>
+        <p>Autonomous intelligent agents that think, decide, and act — trained on your business logic and deployed across any workflow.</p>
+        <ul class="card-features">
+          <li>Custom LLM-powered agents</li>
+          <li>Multi-agent orchestration</li>
+          <li>RAG knowledge systems</li>
+          <li>Real-time decision engines</li>
+          <li>API & tool integration</li>
+        </ul>
+        <a href="#contact" class="card-link">Build Your Agent →</a>
+        <div class="card-glow"></div>
+      </div>
+
+      <!-- Automation -->
+      <div class="service-card card-automation" id="automation">
+        <div class="card-number">02</div>
+        <div class="card-icon-wrap">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="20" width="16" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+              <rect x="40" y="20" width="16" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+              <rect x="24" y="36" width="16" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 26h16M32 32v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <h3>Automated Systems</h3>
+        <p>End-to-end business process automation — from lead capture to delivery, invoicing to reporting — zero manual effort.</p>
+        <ul class="card-features">
+          <li>n8n / Make / Zapier pipelines</li>
+          <li>CRM & ERP automation</li>
+          <li>Email & outreach sequences</li>
+          <li>Data sync & reporting</li>
+          <li>Custom webhook systems</li>
+        </ul>
+        <a href="#contact" class="card-link">Automate Now →</a>
+        <div class="card-glow"></div>
+      </div>
+
+      <!-- Branding / Canva -->
+      <div class="service-card card-brand" id="branding">
+        <div class="card-number">03</div>
+        <div class="card-icon-wrap">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 48L32 16l16 32H16z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="32" cy="32" r="6" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="2"/>
+              <path d="M32 16v-6M48 32h6M16 32h-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <h3>Modern Business & Brand</h3>
+        <p>From strategy to pixels — we design websites, visual systems, and Canva-powered brand kits that make you impossible to ignore.</p>
+        <ul class="card-features">
+          <li>Brand identity & guidelines</li>
+          <li>Canva brand kit systems</li>
+          <li>Website design & dev</li>
+          <li>Social media templates</li>
+          <li>Pitch decks & marketing</li>
+        </ul>
+        <a href="#contact" class="card-link">Design My Brand →</a>
+        <div class="card-glow"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+<section class="process">
+  <div class="container">
+    <div class="section-label">Our Process</div>
+    <h2 class="section-title">From Idea to <em>Deployed Intelligence</em></h2>
+
+    <div class="process-steps">
+      <div class="process-line"></div>
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h4>Discovery & Mapping</h4>
+          <p>We audit your current workflows, identify automation opportunities, and map the intelligence layer your business needs.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h4>Architect & Design</h4>
+          <p>We design your AI agent architecture, automation flows, and brand systems — all aligned to your business model.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h4>Build & Integrate</h4>
+          <p>Our engineers build, test, and integrate every system — agents, automations, APIs, and UIs work as one unified layer.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h4>Deploy & Optimize</h4>
+          <p>We launch, monitor, and continuously improve — your systems get smarter and faster every week post-launch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TECH STACK ═══════════════════════ -->
+<section class="tech">
+  <div class="container">
+    <div class="section-label">Technology</div>
+    <h2 class="section-title">Built on the <em>Best Stack</em></h2>
+    <div class="tech-grid">
+      <div class="tech-item"><span>OpenAI GPT-4o</span></div>
+      <div class="tech-item"><span>Claude / Anthropic</span></div>
+      <div class="tech-item"><span>LangChain</span></div>
+      <div class="tech-item"><span>n8n</span></div>
+      <div class="tech-item"><span>Make.com</span></div>
+      <div class="tech-item"><span>Supabase</span></div>
+      <div class="tech-item"><span>Pinecone</span></div>
+      <div class="tech-item"><span>Next.js</span></div>
+      <div class="tech-item"><span>Canva API</span></div>
+      <div class="tech-item"><span>Zapier</span></div>
+      <div class="tech-item"><span>Airtable</span></div>
+      <div class="tech-item"><span>Vercel</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ WORK / CASE STUDIES ═══════════════════════ -->
+<section class="work" id="work">
+  <div class="container">
+    <div class="section-label">Case Studies</div>
+    <h2 class="section-title">Systems That <em>Delivered Results</em></h2>
+
+    <div class="work-grid">
+      <div class="work-card">
+        <div class="work-tag">AI Agent</div>
+        <div class="work-visual wv-1">
+          <div class="wv-inner">
+            <div class="node n1"></div>
+            <div class="node n2"></div>
+            <div class="node n3"></div>
+            <div class="edge e1"></div>
+            <div class="edge e2"></div>
+          </div>
+        </div>
+        <h4>SalesIQ Agent</h4>
+        <p>Autonomous sales intelligence agent that qualifies leads, drafts outreach, and books meetings — 24/7 without human input.</p>
+        <div class="work-result"><span>+340%</span> qualified meetings booked</div>
+      </div>
+      <div class="work-card">
+        <div class="work-tag">Automation</div>
+        <div class="work-visual wv-2">
+          <div class="wv-inner flow-anim">
+            <div class="flow-block">CRM</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-block">AI</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-block">Email</div>
+          </div>
+        </div>
+        <h4>FinOps Automation Suite</h4>
+        <p>Full accounts receivable pipeline — invoice generation, follow-ups, reconciliation, and reporting — fully automated.</p>
+        <div class="work-result"><span>92%</span> reduction in manual finance work</div>
+      </div>
+      <div class="work-card">
+        <div class="work-tag">Branding</div>
+        <div class="work-visual wv-3">
+          <div class="wv-inner brand-anim">
+            <div class="brand-circle bc1"></div>
+            <div class="brand-circle bc2"></div>
+            <div class="brand-circle bc3"></div>
+          </div>
+        </div>
+        <h4>TechCo Brand System</h4>
+        <p>Full brand identity + Canva system for a Series A SaaS — logo, palette, typography, 60+ templates, and web presence.</p>
+        <div class="work-result"><span>3 weeks</span> from brief to launch-ready</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-label">Clients</div>
+    <h2 class="section-title">What Our <em>Clients Say</em></h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p>NexaFlow built an AI agent that handles our entire inbound support queue. We went from 3 full-time agents to 1 in 6 weeks.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av1">JK</div>
+          <div><strong>James K.</strong><span>CTO, Luminary Health</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p>The brand system they built in Canva is incredible — our entire team can now produce on-brand content without a designer.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av2">SR</div>
+          <div><strong>Sofia R.</strong><span>Head of Marketing, Scalr</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p>From onboarding to reporting, our ops are now 90% automated. NexaFlow paid for itself in the first month.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av3">MO</div>
+          <div><strong>Marco O.</strong><span>CEO, Orion Ventures</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PRICING ═══════════════════════ -->
+<section class="pricing">
+  <div class="container">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Simple, <em>Transparent</em> Packages</h2>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">Starter</div>
+        <div class="price-amount"><span>$1,200</span><em>/project</em></div>
+        <p>Perfect for small businesses needing one core automation or brand kit.</p>
+        <ul>
+          <li>✦ 1 automation pipeline</li>
+          <li>✦ Basic brand kit (Canva)</li>
+          <li>✦ 1 landing page</li>
+          <li>✦ 2 weeks delivery</li>
+          <li>✦ 30-day support</li>
+        </ul>
+        <a href="#contact" class="price-btn price-btn-outline">Get Started</a>
+      </div>
+      <div class="price-card price-featured">
+        <div class="price-popular">Most Popular</div>
+        <div class="price-tier">Growth</div>
+        <div class="price-amount"><span>$3,800</span><em>/project</em></div>
+        <p>For growing teams ready to deploy AI agents and full automation stacks.</p>
+        <ul>
+          <li>✦ 1 custom AI agent</li>
+          <li>✦ 3 automation pipelines</li>
+          <li>✦ Full brand system</li>
+          <li>✦ Website (5 pages)</li>
+          <li>✦ 90-day support</li>
+        </ul>
+        <a href="#contact" class="price-btn price-btn-solid">Start Now</a>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Enterprise</div>
+        <div class="price-amount"><span>Custom</span><em></em></div>
+        <p>Full-scale intelligent systems for established companies or complex workflows.</p>
+        <ul>
+          <li>✦ Multi-agent systems</li>
+          <li>✦ Unlimited automations</li>
+          <li>✦ Full design ecosystem</li>
+          <li>✦ Dedicated engineer</li>
+          <li>✦ Ongoing retainer</li>
+        </ul>
+        <a href="#contact" class="price-btn price-btn-outline">Let's Talk</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CTA SECTION ═══════════════════════ -->
+<section class="cta-section">
+  <div class="cta-bg-canvas" id="ctaBg"></div>
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-label">Ready?</div>
+      <h2>Let's Build Something<br/><em>Extraordinary Together</em></h2>
+      <p>Book a free 30-minute strategy call. We'll map out exactly what automation and AI can do for your business — no pitch, just clarity.</p>
+      <a href="#contact" class="btn-primary btn-large">
+        <span>Book Free Strategy Call</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label">Get In Touch</div>
+        <h2>Start Your <em>AI Journey</em></h2>
+        <p>Tell us about your project and we'll respond within 24 hours with a tailored proposal.</p>
+        <div class="contact-details">
+          <div class="c-detail">
+            <span class="c-icon">📧</span>
+            <a href="mailto:hello@nexaflow.ai">hello@nexaflow.ai</a>
+          </div>
+          <div class="c-detail">
+            <span class="c-icon">💬</span>
+            <span>Response within 24 hours</span>
+          </div>
+          <div class="c-detail">
+            <span class="c-icon">🌍</span>
+            <span>Remote-first · Global clients</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link">LinkedIn</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">GitHub</a>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Company</label>
+            <input type="text" placeholder="Company name" />
+          </div>
+          <div class="form-group">
+            <label>Service Interest</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>AI Agents</option>
+              <option>Automated Systems</option>
+              <option>Brand & Website</option>
+              <option>Full Stack (All Three)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell us about your project</label>
+            <textarea rows="4" placeholder="Describe your goals, current challenges, or what you'd like to automate..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">
+            <span>Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✓ Message sent! We'll be in touch within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">NexaFlow</span>
+        </a>
+        <p>Building intelligent systems for the modern business — AI agents, automation, and brand design that never sleep.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#agents">AI Agents</a></li>
+            <li><a href="#automation">Automation</a></li>
+            <li><a href="#branding">Branding</a></li>
+            <li><a href="#work">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Process</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 NexaFlow. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
